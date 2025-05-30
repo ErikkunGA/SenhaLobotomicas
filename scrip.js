@@ -23,7 +23,7 @@ let albafeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@
 function silvao() {
     let senha = ""
     for (let i = 0; i < progresso; i++){
-        let sorte = sortearNumero(1, 90)
+        let sorte = sortearNumero(1, 91)
         let nhase = albafeto[sorte];
         senha += nhase
     }
@@ -43,8 +43,8 @@ const imagens = [
     "./img/imagem (11).png"
 ]
 function sortearImagem() {
-    const indice = sortearNumero(1, 11);
-    document.getElementById("background").style.backgroundImage = `url(/img${imagem[indice]})`;
-    alert(indice);
-}
+    const indice = Math.floor(Math.random() * imagens.length);
+    document.body.style.backgroundImage = `url('${imagens[indice]}')`;
 
+}
+window.onload = sortearImagem();

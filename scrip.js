@@ -43,7 +43,8 @@ const imagens = [
     "./img/imagem (11).png"
 ]
 function sortearImagem() {
-    const indice = sortearImagem(1, 11);
+    const indice = sortearNumero(1, 11);
     document.getElementById("background").style.backgroundImage = `url(/img${imagem[indice]})`;
     alert(indice);
 }
+

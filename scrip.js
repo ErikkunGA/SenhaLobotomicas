@@ -19,11 +19,11 @@ function destualizarProgresso(){
         document.getElementById("progress-text").textContent = progresso
     }
 }
-let albafeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[{]};:'\",<.>/?\\|`~"
+let albafeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[{]};:',<.>/?|`~"
 function silvao() {
     let senha = ""
     for (let i = 0; i < progresso; i++){
-        let sorte = sortearNumero(1, 98)
+        let sorte = sortearNumero(1, 90)
         let nhase = albafeto[sorte];
         senha += nhase
     }

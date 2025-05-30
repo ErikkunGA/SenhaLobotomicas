@@ -1,0 +1,54 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.teste{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.altor{
+    display: block;
+    margin: auto;
+    padding-top: 10%;
+}
+.texto{
+    padding-top: 5px;
+    text-align: center;
+}
+#resultado{
+    padding-top: 10px;
+    text-align: center;
+}
+.WuW{
+    text-align: center;
+}
+#progress-container {
+    width: 100px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#progress-bar {
+    width: 1%;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.5s;
+}
+#progress-text{
+    padding-left: 25px;
+}
+.avacar,
+.regredir{
+    display: flex;
+    gap: 50px;
+}
+#background {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}

@@ -47,5 +47,3 @@ function sortearImagem() {
     document.getElementById("background").style.backgroundImage = `url(/img${imagem[indice]})`;
     alert(indice);
 }
-sortearImagem();
-

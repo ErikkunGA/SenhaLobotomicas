@@ -10,12 +10,7 @@
     align-items: center;
 
 }
-#altor{
-    display: block;
-    margin: auto;
-    padding-top: 10%;
-    size: 50%;
-}
+
 .texto{
     padding-top: 5px;
     text-align: center;
@@ -48,6 +43,6 @@
     display: flex;
     gap: 50px;
 }
-#background {
+body {
     background-size: 100%;
 }

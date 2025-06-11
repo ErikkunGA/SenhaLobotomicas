@@ -6,26 +6,61 @@ let numuru=(sortearNumero(1, 10));
 
 let progresso = 1;
 function atualizarProgresso() {
-    if (progresso < 100) {
-        progresso += 1;
+        progresso ++
         document.getElementById("progress-bar").style.width = progresso + "%";
         document.getElementById("progress-text").textContent = progresso
-    }
+        nfugb();
 }
 function destualizarProgresso(){
     if (progresso > 1){
         progresso = 1;
-        document.getElementById("progress-bar").style.width = progresso + "%";
-        document.getElementById("progress-text").textContent = progresso
+        document.getElementById("progress-bar").style.width = 1 + "%"
     }
+    if (progresso <= 1){
+        progresso --
+        document.getElementById("progress-bar").style.width = 0 + "%"
+    }if (progresso == -1){
+        alert("Não vai dar certo");
+        document.getElementById("progress-bar").style.width = 0 + "%"
+    }if (progresso == -6){
+        alert("Você é idiota!")
+        progresso = 6969
+        document.getElementById("progress-bar").style.width = progresso + "%"
+    }
+    
+    document.getElementById("progress-text").textContent = progresso
+    
+        nfugb();
+}
+function nfugb(){
+    if (progresso > 100){
+        document.getElementById("progress-container").style.width = progresso + "px";
+    }else{
+        document.getElementById("progress-container").style.width = 100 + "px";
+    }
+}
+function picas(){
+    let cu = sortearNumero(1, 99);
+    progresso = progresso + cu
+    document.getElementById("progress-bar").style.width = cu + "%";
+    document.getElementById("progress-text").textContent = progresso
+    nfugb();
 }
 let albafeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[{]};:',<.>/?|`~"
 function silvao() {
+    for (let i = 0; i <= 360; i+=10){
+        setTimeout(() => {
+        document.getElementById("background").style.transform = `rotate(${i}deg)`;
+        }, i);
+    }
     let senha = ""
     for (let i = 0; i < progresso; i++){
         let sorte = sortearNumero(1, 91)
         let nhase = albafeto[sorte];
         senha += nhase
+    }
+    if (senha <= 1){
+        senha = "Uma bosta"
     }
     document.getElementById("resultado").textContent = "A senha é: " + senha;
 }
@@ -55,7 +90,13 @@ function sortearImagem() {
 }
 function sortearAutor(){
     const indice = Math.floor(Math.random() * autor.length);
-    document.getElementById("altor").src = `${autor[indice]}`;
+    let img = document.createElement("img");
+    img.src = autor[indice];
+    img.style.display = "block";
+    img.style.margin = "auto";
+    img.style.paddingTop = "10%"
+    img.style.size = "50%"
+    document.getElementById("altor").appendChild(img);
 }
 window.onload = sortearImagem();
 window.onload =  sortearAutor();

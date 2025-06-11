@@ -47,12 +47,11 @@ function picas(){
     nfugb();
 }
 let albafeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[{]};:',<.>/?|`~"
-function silvao() {
+function silvao(){
     for (let i = 0; i <= 360; i+=10){
         setTimeout(() => {
         document.getElementById("background").style.transform = `rotate(${i}deg)`;
-        }, i);
-    }
+        }, i);}
     let senha = ""
     for (let i = 0; i < progresso; i++){
         let sorte = sortearNumero(1, 91)
@@ -63,6 +62,7 @@ function silvao() {
         senha = "Uma bosta"
     }
     document.getElementById("resultado").textContent = "A senha é: " + senha;
+    
 }
 const imagens = [
     "./img/imagem (1).png",
@@ -89,7 +89,10 @@ function sortearImagem() {
     document.body.style.backgroundImage = `url('${imagens[indice]}')`;
 }
 function sortearAutor(){
-    const indice = Math.floor(Math.random() * autor.length);
+    const indice = sortearNumero(1, 20)
+    if (indice >= 7){
+        memes()
+    }
     let img = document.createElement("img");
     img.src = autor[indice];
     img.style.display = "block";
@@ -97,6 +100,16 @@ function sortearAutor(){
     img.style.paddingTop = "10%"
     img.style.size = "50%"
     document.getElementById("altor").appendChild(img);
+}
+function memes(){
+    let iframe = document.createElement("iframe");
+    iframe.src = "tela.mp4"
+    iframe.style.display = "block";
+    iframe.style.border = "0%";
+    iframe.style.margin = "auto";
+    iframe.style.paddingTop = "10%"
+    iframe.style.size = "50%"
+    document.getElementById("altor").appendChild(iframe);
 }
 window.onload = sortearImagem();
 window.onload =  sortearAutor();
